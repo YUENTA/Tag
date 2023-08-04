@@ -1,0 +1,126 @@
+*{ /* *는 css의 전역선택자->모든 요소에 대해 초기화 스타일을 적용하는 코드 */
+    margin: 0; 
+    padding: 0; 
+    /* margin, padding을 0으로 설정: 요소의 여백을 없앰 */
+    box-sizing: border-box;
+    /* box-sizing 속성은 border-box로 설정하여 요소 크기 계산 시, 테두리와 안쪽 여백 포함 */
+}
+
+a{ /*a도 전역선택자로 모든 링크에 대해 초기화 스타일 적용 */
+    text-decoration: none;
+    /* text-decoration는 링크에 밑줄을 없애는 역할을 함.  */
+    color: #fff;
+    /* color는 링크의 글자 색상을 지정 */
+}
+
+body{
+    position: relative;
+    /* body요소가 상대적으로 배치되도록 함 */
+    background-color: #000;
+    /* 배경색 검정으로 지정 */
+    height: 100vh;
+    /* 높이 100vh 설정: 뷰 포트의 높이와 동일한 높이를 갖도록 함 */
+    background-size: cover;
+    /* background-size를 cover로 설정하여 지정한 요소를 다 덮도록 배경 이미지를 확대/축소 */
+    background-repeat: no-repeat;
+    /* 배경이미지가 반복되지 않도록 설정 */
+    background-position: center;
+    /* 배경 이미지를 중앙에 설정 */
+    font-family: 'Libre Baskerville', serif;
+    /* 폰트를 Libre Baskerville로 지정 */
+}
+
+ .addTag{ /*class이름으로 */
+    position: relative;
+    border: none;
+    /* 경계선 없음 */
+    width: 800px;
+    height: 120px;
+    text-align: center;
+    /* 글자 위치 가운데로 설정 */
+    font-size: 72px;
+    font-style: italic;
+    padding: 0 30px;
+    /* padding은 안쪽 여백 지정: 좌우 30px, 상하 0으로 지정 */
+    font-weight: 700;
+    /* 글자 굵기 700으로 설정 */
+    background: transparent;
+    color: #fff;
+    text-shadow: 0 1px 6px rgba(0,0,0,0,5);
+    /* 그림자의 위치: 수평 0, 수직 1px, 그림자 크기 6px, 색상 검정 반투명 */
+    font-family: 'Kalam', cursive;
+}
+
+input.addTag::placeholder{
+    /* input태그의 addTag 클래스의 placeholder 텍스트가 표시되는 코드 */
+    color: #fff;
+}
+
+input.addTag::-moz-placeholder,
+input.addTag::-webkit-input-placeholder{
+    /* webkit는 크롬, 사파리 등의 브라우저에서만 적용되는 속성 */
+    color: #fff;
+}
+
+.addTag:focus{
+    /* focus라는 가상 클래스를 사용하여 input이 포커스 받았을 때 스타일 적용하는 코드 */
+    outline: none;
+    /* 입력필드가 포커스 받았을 때 외곽선이 생기지 않도록 none지정 */
+}
+
+.container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    /* 중앙으로 배치 */
+    padding: 30px 0;
+    width: 800px;
+    text-align: center;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    /* 경계선 모서리 다듬기 */
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    /* 수평으로 -50%, 수직으로 -50% 이동 */
+}
+
+.container__tag{
+    margin-top: 30px;
+    /* 위쪽 여백 30px로 지정 */
+}
+
+.tag {
+    color: #000;
+    display: inline-block;
+    cursor: pointer;
+    font-size: 24px;
+    font-weight: 500;
+    background-color: rgba(255,255,255,0.7);
+    margin: 8px 4px;
+    padding: 5px 25px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    transition: transform 0.3s ease;
+    -webkit-transition: transform 0.3s ease;
+    -moz-transition: transform 0.3s ease;
+    -ms-transition: transform 0.3s ease;
+    -o-transition: transform 0.3s ease;
+  }
+
+  .tag:hover {
+    transform: translateY(-5px);
+    -webkit-transform: translateY(-5px);
+    -moz-transform: translateY(-5px);
+    -ms-transform: translateY(-5px);
+    -o-transform: translateY(-5px);
+    background-color: rgba(255, 221, 28, 0.7);
+  }
